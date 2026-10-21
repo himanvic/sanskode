@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem in Sanskode.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for reporting a bug. Please do not include private browser data or secrets."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem clearly.
+      placeholder: I expected ... but ... happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Choose ...
+        3. Click ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 130 / Firefox 132 / etc.
+    validations:
+      required: false
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type
+      options:
+        - Desktop / laptop
+        - Mobile phone
+        - Tablet
+        - Other
+    validations:
+      required: true
